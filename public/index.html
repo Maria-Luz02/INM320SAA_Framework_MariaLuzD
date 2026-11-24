@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <!-- Styles SASS-->
+    <link rel="stylesheet" href="/assets/css/stylesheet.css" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="d-flex min-vh-100">
+            <!-- ROW1-sidebar: as wide as the icons on phones, 3 columns on tablets, 2 on big screens -->
+            <div class="col-auto col-sm-3 col-xl-2">
+                <nav class="navbar border-bottom border-body">
+                    <div class="container-fluid">
+                        <!-- icon on phones, full name from tablets up -->
+                        <a class="navbar-brand text-wrap" href="#">
+                            <i class="bi bi-emoji-smile"></i><span class="d-none d-sm-inline ms-2">PURITY UI
+                                DASHBOARD</span>
+                        </a>
+                    </div>
+                </nav>
+                <!-- Vertical tab-Dashboard -->
+                <nav class="nav flex-column m-2">
+                    <a class="nav-link m-2" href="#">
+                        <i class="bi bi-house-door-fill"></i><span class="d-none d-sm-inline ms-2">Dashboard</span>
+                    </a>
+                    <a class="nav-link m-2" href="#">
+                        <i class="bi bi-bar-chart-fill"></i><span class="d-none d-sm-inline ms-2">Tables</span>
+                    </a>
+                    <a class="nav-link m-2" href="#">
+                        <i class="bi bi-credit-card-fill"></i><span class="d-none d-sm-inline ms-2">Billing</span>
+                    </a>
+                    <a class="nav-link m-2" href="#">
+                        <i class="bi bi-wrench"></i><span class="d-none d-sm-inline ms-2">RTL</span>
+                    </a>
+                </nav>
+                <!-- Vertical tab-Account pages -->
+                <h2 class="small fw-bold text-uppercase mt-3 px-3 d-none d-sm-block">Account Pages</h2>
+                <nav class="nav flex-column">
+                    <a class="nav-link m-2" href="#">
+                        <i class="bi bi-person-fill"></i><span class="d-none d-sm-inline ms-2">Profile</span>
+                    </a>
+                    <a class="nav-link m-2" href="#">
+                        <i class="bi bi-file-earmark-fill"></i><span class="d-none d-sm-inline ms-2">Sign In</span>
+                    </a>
+                    <a class="nav-link m-2" href="#">
+                        <i class="bi bi-rocket-takeoff-fill"></i><span class="d-none d-sm-inline ms-2">Sign Up</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- ROW2- CONTENT (flex column so the last row can stretch to the bottom) -->
+            <div class="col col-sm-9 col-xl-10 d-flex flex-column p-3">
+                <!-- HEADER -->
+                <header class="dashboard-header mb-3">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <!-- Left Side -->
+                        <div>
+                            <div class="breadcrumb-text">
+                                <p class="mb-0">Pages / Dashboard</p>
+                            </div>
+
+                            <div class="dashboard-title">
+                                <h1 class="small fw-bold text-uppercase mt-2">Dashboard</h1>
+                            </div>
+                        </div>
+                        <!-- Right Side -->
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="search">
+                                <input type="text" class="form-control" placeholder="Type here..." aria-label="search">
+                            </div>
+
+                            <a href="#" class="sign-in text-nowrap">
+                                <i class="bi bi-person-fill me-1"></i><span>Sign In</span>
+                            </a>
+                            <i class="bi bi-gear-fill"></i>
+                            <i class="bi bi-bell-fill"></i>
+
+                        </div>
+                    </div>
+                </header>
+                <!-- MAIN -->
+                <main class="d-flex flex-column flex-grow-1">
+                    <!-- ROW OF STATS -->
+                    <div class="row g-3 mb-3">
+                        <!-- Today's Money -->
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card stat-card">
+                                <div class="d-flex justify-content-between align-items-center m-3">
+                                    <div>
+                                        <div class="text-muted">Today's Money</div>
+                                        <div class="card-value">$53,000<span class="positive">+55%</span></div>
+                                    </div>
+                                    <div class="icon-box">
+                                        <i class="bi bi-wallet2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Today's Users -->
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card stat-card">
+                                <div class="d-flex justify-content-between align-items-center m-3">
+                                    <div>
+                                        <div class="text-muted">Today's Users</div>
+                                        <div class="card-value">2,300<span class="positive">+5%</span></div>
+                                    </div>
+                                    <div class="icon-box">
+                                        <i class="bi bi-globe"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- New client -->
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card stat-card">
+                                <div class="d-flex justify-content-between align-items-center m-3">
+                                    <div>
+                                        <div class="text-muted">New Client</div>
+                                        <div class="card-value">+3,052<span class="negative">-14%</span></div>
+                                    </div>
+                                    <div class="icon-box">
+                                        <i class="bi bi-file-earmark-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Total sales -->
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card stat-card">
+                                <div class="d-flex justify-content-between align-items-center m-3">
+                                    <div>
+                                        <div class="text-muted">Total Sales</div>
+                                        <div class="card-value">$173,000<span class="positive">+8%</span></div>
+                                    </div>
+                                    <div class="icon-box">
+                                        <i class="bi bi-cart-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sales overview & Active Users (switched, 50% each) -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-lg-6">
+                            <div class="card dashboard-card h-100">
+                                <div class="dark-card">
+                                    <h2 class="h6 fw-bold mb-0">Sales overview</h2>
+                                    <small class="text-sub">(+23) than last week</small>
+                                    <img src="assets/IMG/Graph.png" class="img-fluid mt-3" alt="sales overview graph">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ACTIVE USERS -->
+                        <div class="col-lg-6">
+                            <div class="card dashboard-card h-100">
+                                <div class="dark-card m-2">
+                                    <img src="assets/IMG/Graph_Active.png" class="img-fluid" alt="Active-users graph">
+                                </div>
+                                <div class="m-3">
+                                    <h2 class="h6 fw-bold mb-0">Active Users</h2>
+                                    <small class="text-sub">(+23) than last week</small>
+                                    <!-- ACTIVE USERS: Stats -->
+                                    <div class="row mt-2">
+                                        <!-- Users -->
+                                        <div class="col-3">
+                                            <small class="text-muted">Users</small>
+                                            <h3 class="h6">32,984</h3>
+                                        </div>
+                                        <!-- Clicks -->
+                                        <div class="col-3">
+                                            <small class="text-muted">Clicks</small>
+                                            <h3 class="h6">2.42m</h3>
+                                        </div>
+                                        <!-- Sales -->
+                                        <div class="col-3">
+                                            <small class="text-muted">Sales</small>
+                                            <h3 class="h6">2,400$</h3>
+                                        </div>
+                                        <!-- Items -->
+                                        <div class="col-3">
+                                            <small class="text-muted">Items</small>
+                                            <h3 class="h6">320</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Projects & Orders review (flex-grow-1 stretches this row to the bottom) -->
+                    <div class="row g-3 flex-grow-1">
+                        <!-- PROJECTS -->
+                        <div class="col-lg-7">
+                            <div class="card dashboard-card h-100">
+                                <div class="dark-card m-3">
+                                    <h2 class="h6 fw-bold mb-0">Project</h2>
+                                    <small class="text-sub"> 30 done this month</small>
+                                    <div class="row mt-4 border-bottom">
+                                        <!-- Users -->
+                                        <div class="col-3">
+                                            <small class="text-muted">Companies</small>
+                                        </div>
+                                        <!-- Clicks -->
+                                        <div class="col-3">
+                                            <small class="text-muted">Members</small>
+                                        </div>
+                                        <!-- Sales -->
+                                        <div class="col-3">
+                                            <small class="text-muted">Budget</small>
+                                        </div>
+                                        <!-- Items -->
+                                        <div class="col-3">
+                                            <small class="text-muted">Completion</small>
+                                        </div>
+                                    </div>
+                                    <!-- Chakra Soft UI Version -->
+                                    <div class="row mt-3">
+                                        <div class="col-3">
+                                            <img src="assets/IMG/Icon_1.png" alt=""><small class="fw-bold m-2"> Chakra
+                                                Soft UI Version</small>
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="assets/IMG/Members_1.png" class="img-fluid"
+                                                alt="sales overview graph">
+                                        </div>
+                                        <div class="col-3">
+                                            <small class="fw-bold">$14,000</small>
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="assets/IMG/Progress_1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <!-- Add Progress Track -->
+                                    <div class="row mt-3">
+                                        <div class="col-3">
+                                            <img src="assets/IMG/Icon_2.png" alt=""><small class="fw-bold m-2">Add
+                                                Progress Track</small>
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="assets/IMG/Members_2.png" class="img-fluid"
+                                                alt="sales overview graph">
+                                        </div>
+                                        <div class="col-3">
+                                            <small class="fw-bold">$3,000</small>
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="assets/IMG/Progress_4.png" alt="">
+                                        </div>
+                                    </div>
+                                    <!-- Fix Platform Errors -->
+                                    <div class="row mt-3">
+                                        <div class="col-3">
+                                            <img src="assets/IMG/icon_3.png" alt=""><small class="fw-bold m-2">Fix
+                                                Platform Errors</small>
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="assets/IMG/Members_2.png" class="img-fluid"
+                                                alt="sales overview graph">
+                                        </div>
+                                        <div class="col-3">
+                                            <small class="fw-bold">Not set</small>
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="assets/IMG/Progress_2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <!-- Launch our Mobile App -->
+                                    <div class="row mt-3">
+                                        <div class="col-3">
+                                            <img src="assets/IMG/icon-4.png" alt=""><small class="fw-bold m-2">Launch
+                                                our Mobile App</small>
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="assets/IMG/Members_3.png" class="img-fluid"
+                                                alt="sales overview graph">
+                                        </div>
+                                        <div class="col-3">
+                                            <small class="fw-bold">$32,000</small>
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="assets/IMG/Progress_2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <!-- Add the New Pricing Page -->
+                                    <div class="row mt-3">
+                                        <div class="col-3">
+                                            <img src="assets/IMG/icon-5.png" alt=""><small class="fw-bold m-2">Add the
+                                                New Pricing Page</small>
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="assets/IMG/Members_1.png" class="img-fluid"
+                                                alt="sales overview graph">
+                                        </div>
+                                        <div class="col-3">
+                                            <small class="fw-bold">$400</small>
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="assets/IMG/Progress.png" alt="">
+                                        </div>
+                                    </div>
+                                    <!-- Redesign New Online Shop -->
+                                    <div class="row mt-3">
+                                        <div class="col-3">
+                                            <img src="assets/IMG/icon-6.png" alt=""><small class="fw-bold m-2">Redesign
+                                                New Online Shop</small>
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="assets/IMG/Members_2.png" class="img-fluid"
+                                                alt="sales overview graph">
+                                        </div>
+                                        <div class="col-3">
+                                            <small class="fw-bold">$7,600</small>
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="assets/IMG/Progress_4.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ORDERS REVIEW -->
+                        <div class="col-lg-5">
+                            <div class="card dashboard-card h-100">
+                                <div class="dark-card m-3">
+                                    <h2 class="h6 fw-bold mb-0">Orders overview</h2>
+                                    <small class="text-sub">+30% this month</small>
+                                </div>
+                                <!-- ORDER ROW -->
+                                <div class="row m-3">
+                                    <!-- Design changes -->
+                                    <div class="timeline-item mb-3">
+                                        <i class="bi bi-bell-fill text-info timeline-icon"></i><span
+                                            class="fw-bold m-3">$2400, Design changes</span>
+                                        <div class="col-5 ms-5">
+                                            <small class="text-muted">22 DEC 7:20 PM</small>
+                                        </div>
+                                    </div>
+                                    <!-- New Order -->
+                                    <div class="timeline-item mb-3">
+                                        <img src="assets/IMG/3.png" alt=""><span class="fw-bold m-3">New
+                                            order #4219423</span>
+                                        <div class="col-5 ms-5">
+                                            <small class="text-muted">21 DEC 11:21 PM</small>
+                                        </div>
+                                    </div>
+                                    <!-- Server Payments for April -->
+                                    <div class="timeline-item mb-3">
+                                        <img src="assets/IMG/shop.png" alt=""><span class="fw-bold m-3">New
+                                            Server Payments for April</span>
+                                        <div class="col-5 ms-5">
+                                            <small class="text-muted">21 DEC 9:28 PM</small>
+                                        </div>
+                                    </div>
+                                    <!-- New card added for order #3210145 -->
+                                    <div class="timeline-item mb-3">
+                                        <img src="assets/IMG/card.png" alt=""><span class="fw-bold m-3">New
+                                            New card added for order #3210145</span>
+                                        <div class="col-5 ms-5">
+                                            <small class="text-muted">20 DEC 3:52 PM</small>
+                                        </div>
+                                    </div>
+                                    <!-- Unlock packages for Development -->
+                                    <div class="timeline-item mb-3">
+                                        <img src="assets/IMG/drop box.png" alt=""><span class="fw-bold m-3">New
+                                            Unlock packages for Development</span>
+                                        <div class="col-5 ms-5">
+                                            <small class="text-muted">19 DEC 11:35 PM</small>
+                                        </div>
+                                    </div>
+                                    <!-- New order #9851258 -->
+                                    <div class="timeline-item mb-3">
+                                        <img src="assets/IMG/Icon_1.png" alt=""><span class="fw-bold m-3">New
+                                            New order #9851258</span>
+                                        <div class="col-5 ms-5">
+                                            <small class="text-muted">18 DEC 4:41 PM</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

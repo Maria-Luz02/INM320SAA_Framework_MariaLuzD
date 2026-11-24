@@ -1,0 +1,69 @@
+$font-body: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+$bg-color: #3c0147;
+$hovercolor: #750286;
+@mixin hover($hover: $hovercolor) {
+    background-color: #ffffff;
+    color: $hover;
+}
+
+body {
+    background-color: #3c0147;
+    color: #fff;
+    font-family: $font-body;
+}
+
+.col-auto {
+    background-color: #8c317ba0;
+    color: #fff;
+}
+
+.navbar-brand {
+    color: #fff;
+}
+
+.nav-link {
+    background-color: #d7bfff;
+    color: rgb(0, 0, 0);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nav-link:hover {
+    @include hover;
+}
+
+.dashboard-header,
+.sign-in {
+    color: #ffffff;
+}
+
+.sign-in:hover {
+    color: #d7bfff;
+}
+
+.card {
+    background-color: #ffecfc;
+}
+.card:hover {
+    @include hover;
+}
+
+.icon-box {
+    background-color: #d7bfff;
+    color: #750286;
+    border: 2px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.text-sub {
+    color: #ff00b3;
+}
+
+.card {
+    justify-content: center;
+}
